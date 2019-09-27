@@ -55,10 +55,10 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.clipboard.autocopy: true
 
 !! URxvt Appearance
-URxvt.font: xft:Consolas:style=Regular:size=9 
-URxvt.boldFont: xft:Consolas:style=Bold:size=9
-URxvt.italicFont: xft:Consolas:style=Bold:size=9 
-URxvt.boldItalicfont: xft:Consolas:style=Bold Italic:size=9
+URxvt.font: xft:Consolas:style=Regular:size=12 
+URxvt.boldFont: xft:Consolas:style=Bold:size=12
+URxvt.italicFont: xft:Consolas:style=Bold:size=12 
+URxvt.boldItalicfont: xft:Consolas:style=Bold Italic:size=12
 URxvt.lineSpace: 0
 URxvt.internalBorder: 10 
 URxvt.cursorBlink: true

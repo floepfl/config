@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+fpath+=("$HOME/.zsh/pure")
+autoload -U promptinit; promptinit
+prompt pure
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/flo/.oh-my-zsh"
@@ -102,3 +105,18 @@ prompt pure
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias spms="sudo pacman -S"
+alias wifi="wifi-gui"
+alias public-ip='curl ifconfig.me/ip; printf "\n"'
+alias c="clear"
+alias spmr="sudo pacman -Rns"
+alias sd="sudo docker"
+alias v="vim"
+alias sv="sudo -E vim"
+alias spmu="sudo pacman -Syu"
+alias gs="git status"
+alias gm="git commit"
+alias ga="git add"
+alias gp="git pull"
+alias sz="source /home/flo/.zshrc"
+alias gcl="git clone"
+o() {xdg-open "$1" &|;}
