@@ -1,0 +1,10 @@
+[Unit]
+Description=Randomly sets a wallpaper from ~/Pictures/Fractals
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/local/bin/wallpaper.sh
+
+[Install]
+WantedBy=graphical-session.target
+

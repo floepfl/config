@@ -1,0 +1,9 @@
+[Unit]
+Description=Change wallpaper every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target
