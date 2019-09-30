@@ -6,6 +6,7 @@ PartOf=graphical-session.target
 ExecStart=/usr/local/bin/set-wallpaper
 Environment="DISPLAY=:0"
 Environment="XAUTHORITY=/home/flo/.Xauthority"
+
 [Install]
 WantedBy=graphical-session.target
 
