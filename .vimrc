@@ -1,9 +1,8 @@
 "Change "* default register of X to "+. See https://wiki.archlinux.org/index.php/Vim
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 let mapleader=" "
 syntax enable
-
 set nocompatible
 set mouse=a
 set backspace=indent,eol,start

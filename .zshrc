@@ -4,6 +4,10 @@ fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit; promptinit
 prompt pure
 
+#Import DISPLAY and XAUTHORITY variables into the systemd user session to run wallpaper.[service/timer] units. See https://wiki.archlinux.org/index.php/Systemd/User#DISPLAY_and_XAUTHORITY 
+dbus-update-activation-environment --systemd --all
+systemctl --user start wallpapers.timer
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/flo/.oh-my-zsh"
 
