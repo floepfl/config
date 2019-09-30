@@ -3,8 +3,9 @@ Description=Randomly sets a wallpaper from ~/Pictures/Fractals
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=/usr/local/bin/wallpaper.sh
-
+ExecStart=/usr/local/bin/set-wallpaper
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/flo/.Xauthority"
 [Install]
 WantedBy=graphical-session.target
 

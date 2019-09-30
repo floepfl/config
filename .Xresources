@@ -55,10 +55,10 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.clipboard.autocopy: true
 
 !! URxvt Appearance
-URxvt.font: xft:DejaVu\ Sans\ Mono:style=Regular:size=10
-URxvt.boldFont: xft:DejaVu\ Sans\ Mono:style=Bold:size=10
-URxvt.italicFont: xft:DejaVu\ Sans\ Mono:style=Bold:size=10
-URxvt.boldItalicfont: xft:DejaVu\ Sans\ Mono:style=Bold Italic:size=10
+URxvt.font: xft:DejaVu\ Sans\ Mono:style=Regular:size=13
+URxvt.boldFont: xft:DejaVu\ Sans\ Mono:style=Bold:size=13
+URxvt.italicFont: xft:DejaVu\ Sans\ Mono:style=Bold:size=13
+URxvt.boldItalicfont: xft:DejaVu\ Sans\ Mono:style=Bold Italic:size=13
 URxvt.lineSpace: 0
 URxvt.internalBorder: 10 
 URxvt.cursorBlink: true
