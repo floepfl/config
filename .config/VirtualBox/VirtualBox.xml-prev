@@ -8,15 +8,16 @@
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.12-linux">
   <Global>
     <ExtraData>
-      <ExtraDataItem name="GUI/UpdateCheckCount" value="2"/>
-      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2019-09-26, stable, 6.0.12"/>
+      <ExtraDataItem name="GUI/UpdateCheckCount" value="3"/>
+      <ExtraDataItem name="GUI/UpdateDate" value="1 d, 2019-09-30, stable, 6.0.12"/>
     </ExtraData>
     <MachineRegistry>
       <MachineEntry uuid="{2bd78126-bff8-4987-8b0e-282574076e81}" src="/home/flo/VirtualBox VMs/hw1-wm/hw1-wm.vbox"/>
+      <MachineEntry uuid="{c5cab7c3-8481-4b46-aeb9-29fb2325b79e}" src="/home/flo/VirtualBox VMs/hw1-wm 1/hw1-wm 1.vbox"/>
     </MachineRegistry>
     <MediaRegistry>
       <HardDisks>
-        <HardDisk uuid="{f8e827ab-52c9-441d-8413-648f68029133}" location="/home/flo/VirtualBox VMs/hw1-wm 1/hw1-vm-disk001.vdi" format="vdi" type="Normal"/>
+        <HardDisk uuid="{f8f7577b-18eb-4388-b28a-6c2f3a37047d}" location="/home/flo/VirtualBox VMs/hw1-wm 2/hw1-vm-disk001.vdi" format="vdi" type="Normal"/>
       </HardDisks>
     </MediaRegistry>
     <NetserviceRegistry>
