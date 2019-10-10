@@ -127,6 +127,12 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+#Wallpaper :
+#Changes wallpaper and saves name in $HOME/.wallpaper
+bindsym $mod+Shift+w exec set-wallpaper 
+#Copy $HOME/.wallpaper in $HOME/Pictures/Wallpapers
+bindsym $mod+Shift+x exec save-wallpaper 
+
 # Display dropdowns
 bindsym $mod+u [instance=dropdown_terminal] scratchpad show; move position center
 bindsym $mod+i [instance=dropdown_calc] scratchpad show; move position center
