@@ -24,3 +24,5 @@ set smartcase
 set hlsearch
 
 nnoremap <leader>h :nohlsearch<CR>
+
+command SW w<Space>!sudo tee %
