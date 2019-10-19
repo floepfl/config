@@ -10,7 +10,7 @@ set number relativenumber
 set encoding=utf-8
 set wildmode=longest,list,full
 set bg=dark
-colorscheme delek
+colorscheme atom
 
 set shiftwidth=2
 set tabstop=2
