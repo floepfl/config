@@ -10,7 +10,7 @@ set number relativenumber
 set encoding=utf-8
 set wildmode=longest,list,full
 set bg=dark
-colorscheme delek
+colorscheme patagonia
 
 set shiftwidth=2
 set tabstop=2
@@ -25,4 +25,7 @@ set hlsearch
 
 nnoremap <leader>h :nohlsearch<CR>
 
+"When forgot to sudo before creating new vim file
 command SW w<Space>!sudo tee %
+
+set smartindent 
