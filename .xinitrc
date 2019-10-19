@@ -1,5 +1,4 @@
 #Urxvt config
-exec xrdb ~/.Xresources &
-
+xrdb ~/.Xresources &
+set-escape
 exec i3
-
