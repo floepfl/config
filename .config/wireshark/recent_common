@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 3.0.4.
+# Recent settings file for Wireshark 3.0.5.
 #
 # This file is regenerated each time Wireshark is quit.
 # So be careful, if you want to make manual changes here.
@@ -8,8 +8,10 @@
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
+recent.capture_filter: dock
 recent.capture_filter: docker0
 recent.capture_filter.ciscodump: docker0
+recent.capture_filter.ciscodump: dock
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
@@ -18,8 +20,8 @@ recent.capture_filter.ciscodump: docker0
 # Decimal numbers.
 gui.geometry_main_x: 29
 gui.geometry_main_y: 29
-gui.geometry_main_width: 1860
-gui.geometry_main_height: 1000
+gui.geometry_main_width: 1856
+gui.geometry_main_height: 997
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).

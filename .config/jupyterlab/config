@@ -1,0 +1,58 @@
+# Venv environnment and python libraries config
+
+## Python librairies
+
+pip install numpy pandas matplotlib bokeh space nltk pycausalimpact pptree
+
+### Spacy
+
+python -m spacy download en
+
+## Jupyterlab plugins
+
+jupyter labextension install @jupyterlab/toc @aquirdturtle/collapsible_headings @krassowski/jupyterlab_go_to_definition 
+
+### LSP
+
+https://github.com/krassowski/jupyterlab-lsp
+
+## Shortcuts changes
+
+Shortcuts :
+
+{
+    "shortcuts": [
+            {
+                "command": "application:activate-next-tab",
+            "keys": [
+                "Alt J"
+            ],
+            "selector": "body"
+            },
+            {
+                    "command": "application:activate-previous-tab",
+            "keys": [
+                "Alt K"
+            ],
+            "selector": "body"
+            }
+    ]
+}
+
+# Config changes
+{
+    "codeCellConfig": {
+        "fontSize": 15,
+        "lineNumbers": true
+    },
+        
+    "markdownCellConfig": {
+        "fontSize": 15,
+        "lineNumbers": true
+    },
+    
+    "rawCellConfig": {
+        "fontSize": 15,
+        "lineNumbers": true
+    }
+}

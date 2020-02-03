@@ -1,0 +1,2 @@
+set selection-clipboard clipboard
+map <A-d> set "first-page-column 1:1"
