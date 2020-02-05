@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+WALLPAPER=$(ls -d /home/flo/Pictures/Fractals/* | sort -R | tail -n 1)
+echo "$WALLPAPER" | cat - > $HOME/.wallpaper
+feh --no-fehbg --bg-scale $WALLPAPER

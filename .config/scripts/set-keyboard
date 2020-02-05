@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Set '|' on 'ö' key
+xmodmap -e "keycode  47 = eacute bar eacute odiaeresis dead_acute dead_doubleacute dead_acute"  
+
+#Set 'ö' on '|' key
+xmodmap -e "keycode  16 = 7 slash 7 slash odiaeresis seveneighths bar"
+
+#Set '~' on 'ä' key
+xmodmap -e "keycode  48 = agrave asciitilde agrave adiaeresis braceleft dead_caron braceleft"
+
+#Set 'ä' on '~' key
+xmodmap -e 'keycode  21 = dead_circumflex dead_grave dead_circumflex dead_grave adiaeresis dead_ogonek dead_tilde'
+
+

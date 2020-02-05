@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+cat $HOME/.wallpaper | xargs cp -t $HOME/Pictures/Wallpapers
