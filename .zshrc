@@ -6,6 +6,9 @@ prompt pure
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/flo/.oh-my-zsh"
+#export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+export I3B=$HOME/.config/i3blocks-contrib
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -41,28 +44,56 @@ export PATH=$PATH:/home/flo/.config/scripts
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias spms="sudo pacman -S"
+#Aliases
+#Misc
 alias wifi="wifi-gui"
 alias public-ip='curl ifconfig.me/ip; printf "\n"'
 alias c="clear"
-alias spmr="sudo pacman -Rns"
 alias sd="sudo docker"
 alias v="vim"
 alias sv="sudo -E vim"
+alias sz="source /home/flo/.zshrc"
+alias ld="ls -ahclt"
+alias scp="sudo cp"
+alias smv="sudo mv"
+
+#Locations
+
+#Pacman
 alias spmu="sudo pacman -Syu"
-alias gs="git status"
+alias spmr="sudo pacman -Rns"
+alias spms="sudo pacman -S"
+
+#Git
+alias gcl="git clone"
+alias gs="git status -s"
 alias gm="git commit"
 alias ga="git add"
 alias gpl="git pull"
 alias gp="git push"
-alias sz="source /home/flo/.zshrc"
-alias gcl="git clone"
+alias gl="git lg2"
+
+#Python
+alias pi="pip install"
+alias jlab="jupyter-lab --no-browser"
+
+#Venv
+alias vnew="source $HOME/EPFL/.venv/bin/activate"
+alias vold="source $HOME/EPFL/.venv-3.7.0/bin/activate"
+alias jpylab="vnew && jupyter-lab --no-browser"
+alias jpylabnew="jpylab"
+alias jpylabold="vold && jupyter-lab --no-browser"
+alias de="deactivate"
+
+#Docker
+alias sd="sudo docker"
+alias sdc="sudo docker-compose"
+
+#Functions
+#Misc
 o() {xdg-open "$1" &|;}
+mcd()
+{
+	mkdir -p -- "$1" &&
+		cd -P -- "$1"
+} # -- is to make sure that the arg is not parsed as an option to mkdir or cd
