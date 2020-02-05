@@ -21,8 +21,11 @@ for_window [instance="dropdown_*"] move position center
 exec --no-startup-id urxvt -name dropdown_terminal
 exec --no-startup-id urxvt -name dropdown_calc -e bpython
 
-#Change keyboard map of ~ and |
-exec --no-startup-id /usr/local/bin/set-keyboard
+#Composite manager
+exec --no-startup-id picom -b
+
+#Set first wallpaper
+exec --no-startup-id set-wallpaper
 
 #Border
 for_window [class="^.*"] border pixel 3
@@ -93,10 +96,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id sudo /usr/local/bin/incr-bright
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo /usr/local/bin/decr-brightness 
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0; exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 0; exec --no-startup-id pactl set-sink-volume 0 -5%  #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle  # mute sound
-
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0; exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-mute 0 0; exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks # mute sound
+# change volume or toggle mute
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -260,10 +263,26 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-				font pango:DejaVu Sans Mono 10
-				separator_symbol " | "
+	i3bar_command i3bar -t
+	colors {
+		background #00000088
+	}
+	font pango:awesome-regular 10
+	separator_symbol "   ┋   "
+	status_command I3B=~/.config/i3blocks-contrib i3blocks
 }
+#bar {
+#        status_command i3status
+#				font pango:DejaVu Sans Mono 10
+#				separator_symbol " | "
+#				colors {
+#        	background #00000000
+#				}
+#}
 
-# Change keyboard layout to ch-fr
+# Keyboard
+## Change keyboard layout to ch-fr
 exec "setxkbmap -layout ch -variant fr"
+
+## Change keyboard map of ~ and |
+exec --no-startup-id set-keyboard
