@@ -223,8 +223,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # misc shortcuts
-bindsym $mod+Ctrl+q exec qutebrowser
-bindsym $mod+Ctrl+f exec firefox
+bindsym $mod+b exec qutebrowser
+bindsym $mod+Shift+b exec firefox
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

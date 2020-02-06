@@ -10,6 +10,20 @@ label=
 INTERFACE=wlp4s0
 interval=60
 
+[bandwidth]
+command=$I3B/bandwidth2/bandwidth2
+interval=persist
+markup=pango
+LABEL=  
+#INTERFACE=(checks all interfaces)
+#USE_BITS=0
+#USE_BYTES=1
+#WARN_RX=0
+#WARN_TX=0
+#CRIT_RX=0
+#CRIT_TX=0
+#USE_SI=0
+
 [volume-pulseaudio]
 command=$I3B/volume-pulseaudio/volume-pulseaudio
 interval=once
@@ -32,6 +46,26 @@ signal=1
 ## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
 #SUBSCRIBE=0
 
+[disk-io]
+command=$I3B/disk-io/disk-io
+#command=$SCRIPT_DIR/disk-io -w 3 -M -P 0
+interval=persist
+markup=pango
+LABEL=  
+#instance=/^sda/
+#DT=5
+#MB_ONLY=0 #0 or 1
+#KB_ONLY=0 #0 or 1
+#WIDTH=4
+#MB_PRECISION=1
+#KB_PRECISION=0
+#REGEX=/^(s|h)d[a-zA-Z]+/
+#THRESHOLD=0
+#WARN_COLOR="#FF0000"
+#SEPARATOR=/
+#PREFIX=
+#SUFFIX="B/s"
+
 [memory]
 command=$I3B/memory/memory
 label=  
@@ -51,7 +85,11 @@ LABEL=
 #T_WARN=50
 #T_CRIT=80
 #DECIMALS=2
-#
+
+[load_average]
+command=$I3B/load_average/load_average
+interval=10
+
 [temperature]
 command=$I3B/temperature/temperature
 label= 
@@ -59,11 +97,30 @@ interval=10
 #T_WARN=70
 #T_CRIT=90
 #SENSOR_CHIP=""
-#
-[battery2]
-command=$I3B/battery2/battery2
+
+#[battery2]
+#command=$I3B/battery2/battery2
+#markup=pango
+#interval=30
+
+[batterybar]
+command=$I3B/batterybar/batterybar
+label=
+interval=5
 markup=pango
-interval=30
+min_width=bat: ■■■■■
+# Discharging colors low to high
+#C1=#FF0027
+#C2=#FF3B05
+#C3=#FFB923
+#C4=#FFD000
+#C5=#E4FF00
+#C6=#ADFF00
+#C7=#6DFF00
+#C8=#10BA00
+#CHARGING_COLOR=#00AFE3
+#FULL_COLOR=#FFFFFF
+#AC_COLOR=#535353
 
 [time]
 command=$I3B/time/time
