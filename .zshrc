@@ -26,6 +26,7 @@ plugins=(git colored-man-pages z zsh-autosuggestions colorize vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH=$PATH:/home/flo/.config/scripts
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
