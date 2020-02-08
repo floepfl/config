@@ -24,6 +24,7 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colored-man-pages z zsh-autosuggestions colorize vi-mode)
 
+#bindkey '^[i' forward-char
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/home/flo/.config/scripts
